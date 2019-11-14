@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="post" enctype="multipart/form-data">
+    课程名称：<input type="text" name="c_name"><br>
+    课程描述：<textarea name="description" cols="30" rows="10"></textarea><br>
+    观看人数：<input type="number" name="show_number"><br>
+    课时：<input type="number" name="c_time_number"><br>
+    所属标签：
+    <select name="label">
+        {% for label in label_list %}
+            <option value="{{ label.id }}">{{ label.l_name }}</option>
+        {% endfor %}
+    </select><br>
+    课程logo：<input type="file" name="logo"><br>
+    <input type="submit" value="提交"><br>
+</form>
+
+<hr>
+<hr>
+<hr>
+<p>{{ l_name }}</p>
+<p>{{ description }}</p>
+
+</body>
+</html>
