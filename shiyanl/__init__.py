@@ -2,11 +2,13 @@ from flask import Flask
 import os
 from flask_sqlalchemy import SQLAlchemy
 from flask_bootstrap import Bootstrap
-
+from flask_restful import Api
 # 实例化
 app = Flask(__name__)
 
 bootstrap=Bootstrap(app)
+
+api=Api(app)
 
 base_path=os.path.abspath(os.path.dirname(__file__))
 

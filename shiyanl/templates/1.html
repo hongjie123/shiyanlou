@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>{{ user }}</p>
+<hr>
+<p>表单元素</p>
+<p>
+    <label>{{ user.username.label }}</label>
+    {{ user.username }}
+</p>
+<hr>
+<form method="post">
+    <p>表单元素</p>
+    {% for u in user %}
+        <p>
+            <label>{{ u.label }}</label>
+            {{ u }}
+        </p>
+    {% endfor %}
+    <button class="btn register" type="submit">提交</button>
+</form>
+<hr>
+<p>{{ message }}</p>
+
+</body>
+</html>

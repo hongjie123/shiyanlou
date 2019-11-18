@@ -103,7 +103,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/index/">
+            <a class="navbar-brand" href="/">
                 <img src="/static/img/logo_03.png">
             </a>
         </div>
@@ -134,8 +134,12 @@
                 </li>
             </ul>
             <div class="navbar-right btns">
-                <a class="btn btn-default navbar-btn sign-in" data-sign="signin" href="#sign-modal" data-toggle="modal">登录</a>
-                <a class="btn btn-default navbar-btn sign-up" data-sign="signup" href="#sign-modal" data-toggle="modal">注册</a>
+                {% if cookie_email %}
+                    <a class="btn btn-default navbar-btn sign-in" href="/logout/">退出</a>
+                {% else %}
+                    <a class="btn btn-default navbar-btn sign-in" href="/?register=True">登录</a>
+                    <a class="btn btn-default navbar-btn sign-up" href="/">注册</a>
+                {% endif %}
             </div>
             <form class="navbar-form navbar-right" action="/courses/" method="get" role="search">
                 <div class="form-group">

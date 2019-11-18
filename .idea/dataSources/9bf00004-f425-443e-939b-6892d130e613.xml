@@ -117,40 +117,44 @@
       <DataType>INTEGER|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="37" parent="10" name="name">
+    <column id="37" parent="10" name="user_name">
       <Position>1</Position>
       <DataType>VARCHAR(32)|0</DataType>
     </column>
-    <column id="38" parent="10" name="password">
+    <column id="38" parent="10" name="email">
       <Position>2</Position>
       <DataType>VARCHAR(32)|0</DataType>
     </column>
-    <column id="39" parent="10" name="role_id">
+    <column id="39" parent="10" name="password">
       <Position>3</Position>
+      <DataType>VARCHAR(32)|0</DataType>
+    </column>
+    <column id="40" parent="10" name="role_id">
+      <Position>4</Position>
       <DataType>INTEGER|0</DataType>
     </column>
-    <key id="40" parent="10">
+    <key id="41" parent="10">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="41" parent="10">
+    <foreign-key id="42" parent="10">
       <ColNames>role_id</ColNames>
       <RefTableName>role</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="42" parent="11" name="user_id">
+    <column id="43" parent="11" name="user_id">
       <DataType>INTEGER|0</DataType>
     </column>
-    <column id="43" parent="11" name="course_id">
+    <column id="44" parent="11" name="course_id">
       <Position>1</Position>
       <DataType>INTEGER|0</DataType>
     </column>
-    <foreign-key id="44" parent="11">
+    <foreign-key id="45" parent="11">
       <ColNames>user_id</ColNames>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="45" parent="11">
+    <foreign-key id="46" parent="11">
       <ColNames>course_id</ColNames>
       <RefTableName>course</RefTableName>
       <RefColNames>id</RefColNames>

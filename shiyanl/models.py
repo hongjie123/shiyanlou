@@ -34,7 +34,8 @@ user_course=db.Table(
 
 #定义数据库模型
 class User(Model):
-    name=db.Column(db.String(32))
+    user_name=db.Column(db.String(32))
+    email=db.Column(db.String(32))
     password=db.Column(db.String(32))
     role_id=db.Column(db.Integer,db.ForeignKey("role.id")) #映射到一表（外键）
     #反向映射到课程表，关系在user_course表中
